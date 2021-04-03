@@ -1,0 +1,17 @@
+A2.output: fleschIndex.o fleschIndex.h main.o
+	gcc main.o fleschIndex.o fleschIndex.h -o A2.output
+
+
+fleschIndex.o: fleschIndex.c
+	gcc -Wall -std=c99 -c fleschIndex.c
+
+main.o: main.c
+	gcc -Wall -std=c99 -c main.c
+
+fleschIndex.h: fleschIndex.h
+	GCC -Wall -std=c99 -c fleschIndex.h
+
+
+clean:
+
+	rm *.o A2.output
